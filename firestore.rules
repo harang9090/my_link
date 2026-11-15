@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 공개 프로필 조회는 누구나 가능, 수정은 본인만 가능
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    match /users/{userId}/profile/{document=**} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // username 중복 검사 및 색인은 누구나 읽기 가능, 로그인은 작성 가능
+    match /usernames/{username} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-b from-slate-50 to-slate-100 dark:from-zinc-900 dark:to-zinc-950 text-slate-800 dark:text-slate-100">
@@ -37,6 +39,17 @@ export default function Home() {
           <span className="px-3 py-1 bg-pink-50 dark:bg-pink-950/50 text-pink-700 dark:text-pink-300 text-xs font-semibold rounded-full border border-pink-100 dark:border-pink-900">
             🚀 지속적인 성장
           </span>
+        </div>
+
+        {/* MyPage Navigation Button */}
+        <div className="pt-2 border-t border-slate-100 dark:border-zinc-800">
+          <Link
+            href="/mypage"
+            className="w-full flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:opacity-95 text-white font-semibold text-sm rounded-2xl shadow-md shadow-indigo-500/20 transition"
+          >
+            <span>⚙️</span>
+            <span>마이페이지 (프로필 수정)</span>
+          </Link>
         </div>
       </div>
     </main>

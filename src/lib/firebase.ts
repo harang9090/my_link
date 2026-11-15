@@ -1,5 +1,7 @@
 import { initializeApp, getApps, getApp, type FirebaseApp } from "firebase/app";
 import { getAnalytics, isSupported, type Analytics } from "firebase/analytics";
+import { getAuth, GoogleAuthProvider, type Auth } from "firebase/auth";
+import { getFirestore, type Firestore } from "firebase/firestore";
 
 export const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -15,6 +17,14 @@ export const firebaseConfig = {
 export const app: FirebaseApp = getApps().length
   ? getApp()
   : initializeApp(firebaseConfig);
+
+// Initialize Auth & Google Provider
+export const auth: Auth = getAuth(app);
+export const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({ prompt: "select_account" });
+
+// Initialize Firestore
+export const db: Firestore = getFirestore(app);
 
 // Analytics initialization (Client-side only)
 let analytics: Analytics | null = null;
