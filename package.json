@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "next build && npx firebase deploy"
+    "deploy": "next build && npx firebase-tools deploy"
   },
   "dependencies": {
     "firebase": "^13.3.0",
