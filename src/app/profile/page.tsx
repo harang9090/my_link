@@ -131,8 +131,9 @@ function ProfileContent() {
 
       {/* 하단 링크 & 마이링크 홍보 */}
       <div className="pt-4 border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between text-xs text-slate-400">
-        <Link href="/" className="hover:text-indigo-500 transition">
-          🔗 MyLink 홈
+        <Link href="/" className="hover:text-indigo-500 transition flex items-center gap-1 font-medium">
+          <span>🔗</span>
+          <span>MyLink</span>
         </Link>
         <Link
           href="/mypage"
@@ -140,6 +141,15 @@ function ProfileContent() {
         >
           나도 프로필 만들기 ✨
         </Link>
+      </div>
+
+      {/* Creator Signature */}
+      <div className="pt-1 text-[11px] text-slate-400 dark:text-zinc-500 flex items-center justify-center gap-1.5 font-medium tracking-tight">
+        <span>created with 💜</span>
+        <span>·</span>
+        <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+          from.hyeon
+        </span>
       </div>
     </div>
   );

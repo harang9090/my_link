@@ -565,6 +565,15 @@ export default function MyPage() {
             <div className="bg-slate-50 dark:bg-zinc-800/60 rounded-2xl p-4 border border-slate-100 dark:border-zinc-800 text-sm text-slate-600 dark:text-slate-300 leading-relaxed break-keep">
               {bio || "소개글이 여기에 표시됩니다."}
             </div>
+
+            {/* Creator Signature Preview */}
+            <div className="pt-2 border-t border-slate-100 dark:border-zinc-800 text-[11px] text-slate-400 dark:text-zinc-500 flex items-center justify-center gap-1.5 font-medium tracking-tight">
+              <span>created with 💜</span>
+              <span>·</span>
+              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                from.hyeon
+              </span>
+            </div>
           </div>
         </div>
       </div>

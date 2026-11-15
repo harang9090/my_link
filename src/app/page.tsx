@@ -204,13 +204,16 @@ export default function Home() {
                     </div>
 
                     {/* Preview CTA Button in Card */}
-                    <div className="pt-1">
+                    <div className="pt-1 space-y-2">
                       <Link
                         href="/mypage"
                         className="block w-full py-2.5 text-center text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 rounded-xl transition-colors border border-indigo-100 dark:border-indigo-900"
                       >
                         나도 이 템플릿으로 만들기 →
                       </Link>
+                      <div className="text-[11px] text-center text-slate-400 dark:text-zinc-500 font-medium">
+                        created with 💜 · <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">from.hyeon</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -306,10 +309,12 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="border-t border-slate-200/80 dark:border-zinc-800/80 py-8 bg-white dark:bg-zinc-950 transition-colors">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-zinc-400">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-wrap">
             <span className="font-semibold text-slate-700 dark:text-zinc-300">🔗 마이링크 (MyLink)</span>
             <span>·</span>
             <span>나만의 올인원 프로필 링크 서비스</span>
+            <span>·</span>
+            <span className="text-indigo-600 dark:text-indigo-400 font-medium">from.hyeon</span>
           </div>
           <div>
             <p>&copy; {new Date().getFullYear()} MyLink. All rights reserved.</p>
